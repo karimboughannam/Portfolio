@@ -11,8 +11,8 @@
         }
     
         // JavaScript for changing text dynamically
-        const roles = ["Customer Service Specialist", "Project Manager", "Business Owner", "Personal Trainer","Tech Support Specialist"];
-        let index = 0;
+        const roles = ["Customer Support Specialist","Software Support Engineer","Mobile / Web Developer","Fitness Consultant and Personal Trainer","Business Computer Administrator","Entrepreneur","Technical Support Specialist"];
+             let index = 0;
     
         function changeText() {
             const heroText = document.querySelector('.roles');
