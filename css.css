@@ -1,14 +1,142 @@
-.header{
-    align-items: center;
-    background: #6a11cb;
 
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9));
-  
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9));
-    text-align: center;
-    font-family:Arial, Helvetica, sans-serif;
-    height: 100%;
-}
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
+        nav {
+            background: linear-gradient(to right, #3498DB, #9B59B6);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            z-index: 2; /* Ensure the nav is above the content */
+        }
+
+        nav:hover {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        nav a:hover {
+            background-color: #2980B9;
+            transform: scale(1.1);
+        }
+
+        .logo {
+            position: relative;
+            font-family: 'Pacifico', cursive;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #ECF0F1;
+        }
+
+        /* Improved mobile navigation */
+        @media (max-width: 768px) {
+            nav {
+                padding: 10px 20px;
+                position: relative;
+            }
+
+            .menu-icon {
+                display: block;
+                position: absolute;
+                top: 10px;
+                right: 20px;
+                font-size: 24px;
+            }
+
+            nav a {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 10px 0;
+                text-align: center;
+            }
+
+            nav.active a {
+                background: rgba(52, 152, 219, 0.8);
+            }
+        }
+
+        .logo:hover::after {
+            content: "Hello";
+            display: block;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 3px;
+            font-size: 12px;
+            z-index: 1;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background-image: linear-gradient(to top, #3498DB, #9B59B6);
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+            margin-top: 0;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hero-text {
+            max-width: 60%;
+        }
+
+        .roles {
+            font-size: 2em;
+            font-weight: bold;
+            margin-top: 20px;
+            animation: changeText 4s infinite;
+        }
+
+        .hero-image {
+            max-width: 48%;
+        }
+
+        img {
+            max-width: 70%;
+            height: auto;
+            border-radius: 30px;
+        }
+
+        @keyframes changeText {
+            0% { opacity: 0; }
+            25% { opacity: 1; }
+            50% { opacity: 0; }
+            75%, 100% { opacity: 1; }
+        }
+        h1{
+            font-size: 2em;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+   

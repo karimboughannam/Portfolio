@@ -3,13 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css.css"/>
-    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="css.css">
+    
+    
 </head>
 <body>
-    <div class="header">
-<h1>Karim Boughannam</h1>
+    <nav>
+        
+        <div class="logo">Karim Boughannam</div>
+        <div class="menu-icon">&#9776;</div>
+        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="#home" onclick="closeMenu()">Home</a>
+        <a href="#portfolio" onclick="closeMenu()">My Journey</a>
+        <a href="#Ed" onclick="closeMenu()">Education</a>
+        <a href="#experience" onclick="closeMenu()">Experience</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
+    </nav>
 
+    <script src="java.js"></script>
+    
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-text">
+            <h1>Hi, I'm Karim a</h1>
+            <p class="roles">Tech Support Specialist</p>
+        </div>
+        <div class="hero-image">
+            <!-- Replace "your-image-url.jpg" with the actual image URL -->
+            <img src="Capture.PNG" alt="Your Image">
+        </div>
     </div>
+
+    <!-- Your website content goes here -->
+
 </body>
 </html>
