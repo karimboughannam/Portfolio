@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Journey</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .life-journey {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .backward-icon,
+        .forward-icon {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .date {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .event {
+            text-align: left;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .event-content {
+            flex: 1;
+        }
+
+        .event h2 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .event p {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="life-journey">
+    <div class="navigation">
+        <span class="backward-icon">&#9665;</span>
+        <div class="date"></div>
+        <span class="forward-icon">&#9655;</span>
+    </div>
+    <div class="event">
+        <div class="event-content">
+            <h2></h2>
+            <p></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const dateElement = document.querySelector('.date');
+        const backwardButton = document.querySelector('.backward-icon');
+        const forwardButton = document.querySelector('.forward-icon');
+
+        // Sample dates and events (replace with your actual data)
+        const events = [
+            { date: '2023-01-01', title: 'Event 1', description: 'Description for Event 1' },
+            { date: '2023-02-15', title: 'Event 2', description: 'Description for Event 2' },
+            // Add more events as needed
+        ];
+
+        let currentIndex = 0;
+
+        // Function to update the displayed event
+        function updateEvent() {
+            const currentEvent = events[currentIndex];
+            dateElement.textContent = currentEvent.date;
+            document.querySelector('.event h2').textContent = currentEvent.title;
+            document.querySelector('.event p').textContent = currentEvent.description;
+        }
+
+        // Event listener for the backward button
+        backwardButton.addEventListener('click', function () {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateEvent();
+            }
+        });
+
+        // Event listener for the forward button
+        forwardButton.addEventListener('click', function () {
+            if (currentIndex < events.length - 1) {
+                currentIndex++;
+                updateEvent();
+            }
+        });
+
+        // Initial update
+        updateEvent();
+    });
+</script>
+
+</body>
+</html>

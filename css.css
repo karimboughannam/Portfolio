@@ -170,3 +170,64 @@
             text-align: left;
             font-family: 'Times New Roman', Times, serif;
          }
+         .journeyHeader{
+            background-image: linear-gradient(to top, #FEF1EE, #3498DB);
+            text-align: center;
+            padding: 20px;
+            margin-top: 0;
+            z-index: 1;
+            
+            justify-content: space-between;
+            align-items: center;
+         }
+
+         
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .backward-icon,
+        .forward-icon {
+            font-size: 20px;
+            cursor: pointer;
+            animation: fadeIn 2s;
+            opacity: 1;
+        }
+
+        .date {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding: 80px;
+        }
+
+        .event {
+            text-align: left;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .event-content {
+            flex: 1;
+        }
+
+        .event h2 {
+            font-size: 16px;
+            margin-bottom: 0px;
+            padding-bottom: 20px
+        }
+
+        .event p {
+            font-size: 14px;
+            color: black;
+            padding: 20px;
+            align-items: center;
+            text-align: center;
+        }
+
+        
